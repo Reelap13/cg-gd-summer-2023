@@ -9,12 +9,13 @@ int main(int argc, char** argv)
 	{
 		auto settings = cg::settings::parse_settings(argc, argv);
 		auto renderer = cg::renderer::make_renderer(settings);
-
+		
 		renderer->init();
 
 		renderer->render();
 
 		renderer->destroy();
+		
 	}
 	catch (std::exception& e)
 	{
